@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Prosper Tech — Full Stack Developer Portfolio. Premium web, app, and API solutions crafted with modern technology." />
+  <title>Prosper Tech — Full Stack Developer Portfolio</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body class="dark-mode">
+
+  <!-- ============================================
+       PRELOADER
+       ============================================ -->
+  <div id="preloader" class="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-logo">
+        <span class="logo-mark">P<i class="fas fa-bolt"></i></span>
+        <span class="logo-text">Prosper <span class="grad">Tech</span></span>
+      </div>
+      <div class="preloader-bar-wrap">
+        <div class="preloader-bar" id="preloaderBar"></div>
+      </div>
+      <div class="preloader-counter">
+        <span id="preloaderCount">0</span><span>%</span>
+      </div>
+      <div class="preloader-tag">Initializing futuristic experience…</div>
+    </div>
+  </div>
+
+  <!-- ============================================
+       STARFIELD CANVAS
+       ============================================ -->
+  <canvas id="starfield" class="starfield"></canvas>
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+  <div class="bg-orb orb-3"></div>
+
+  <!-- ============================================
+       NAVBAR
+       ============================================ -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#home" class="nav-logo">
+        <span class="logo-mark sm">P<i class="fas fa-bolt"></i></span>
+        <span>Prosper <span class="grad">Tech</span></span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#blog" class="nav-link">Blog</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <i class="fas fa-moon"></i>
+        </button>
+        <a href="#contact" class="btn btn-ghost hide-sm">Let's Talk</a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================================
+       HERO
+       ============================================ -->
+  <section id="home" class="hero">
+    <video class="hero-video" autoplay muted loop playsinline poster="">
+      <source src="loop.mp4" type="video/mp4" />
+    </video>
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <span class="eyebrow"><span class="dot"></span> Available for new projects</span>
+        <h1>
+          Hi, I'm <span class="grad">Prosper</span><br/>
+          <span class="typed-wrap">
+            <span id="typed" class="typed"></span><span class="caret">|</span>
+          </span>
+        </h1>
+        <p class="lede">
+          Crafting premium digital products at <strong>Prosper Tech</strong> — full-stack web apps,
+          mobile experiences, and battle-tested APIs that scale. I turn ambitious ideas into
+          production software with elegant architecture and pixel-perfect UI.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Hire Me</a>
+          <a href="#projects" class="btn btn-outline"><i class="fas fa-folder-open"></i> View Projects</a>
+          <a href="#" class="btn btn-ghost" id="downloadCv"><i class="fas fa-download"></i> Download CV</a>
+        </div>
+
+        <div class="hero-meta">
+          <div><strong>7+</strong><span>Years Experience</span></div>
+          <div><strong>120+</strong><span>Projects Shipped</span></div>
+          <div><strong>40+</strong><span>Happy Clients</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="profile-ring">
+          <div class="profile-glow"></div>
+          <div class="profile-img">
+            <img src="/profile.jpeg" alt="Prosper - Full Stack Developer" />
+          </div>
+          <span class="floating-chip chip-1"><i class="fab fa-react"></i> React</span>
+          <span class="floating-chip chip-2"><i class="fab fa-node-js"></i> Node.js</span>
+          <span class="floating-chip chip-3"><i class="fas fa-database"></i> PostgreSQL</span>
+          <span class="floating-chip chip-4"><i class="fab fa-aws"></i> AWS</span>
+        </div>
+      </div>
+    </div>
+
+    <a href="#about" class="scroll-cue" aria-label="Scroll down">
+      <span></span>
+    </a>
+  </section>
+
+  <!-- ============================================
+       ABOUT
+       ============================================ -->
+  <section id="about" class="section">
+    <div class="container">
+      <header class="section-header reveal">
+        <span class="kicker">About Me</span>
+        <h2>Engineer. <span class="grad">Designer.</span> Problem-Solver.</h2>
+        <p>From early-stage startups to enterprise-grade platforms, I build software that people love to use.</p>
+      </header>
+
+      <div class="about-grid">
+        <div class="about-img reveal">
+          <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?w=900&q=80&auto=format&fit=crop" alt="About Prosper" />
+          <div class="badge-experience">
+            <span class="num">7+</span>
+            <span class="lbl">Years<br/>Experience</span>
+          </div>
+        </div>
+
+        <div class="about-text reveal">
+          <h3>Building digital products that <span class="grad">ship and scale</span>.</h3>
+          <p>
+            I'm Prosper, the founder of <strong>Prosper Tech</strong>. I specialize in modern
+            full-stack development — designing systems, writing clean code, and shipping
+            polished interfaces. Over the last seven years I've partnered with founders,
+            agencies, and Fortune 500 teams to launch SaaS platforms, fintech tools,
+            mobile apps, and developer infrastructure.
+          </p>
+          <p>
+            My north star is simple: software should feel <em>fast, beautiful, and inevitable</em>.
+            I obsess over performance, accessibility, and the small details that turn a product
+            into a brand.
+          </p>
+
+          <ul class="about-list">
+            <li><i class="fas fa-check-circle"></i> Architecting scalable, type-safe systems end-to-end</li>
+            <li><i class="fas fa-check-circle"></i> Designing intuitive, conversion-focused interfaces</li>
+            <li><i class="fas fa-check-circle"></i> Mentoring teams and leading agile delivery</li>
+            <li><i class="fas fa-check-circle"></i> Open-source contributor &amp; conference speaker</li>
+          </ul>
+
+          <div class="about-info">
+            <div><span>Name:</span> Prosper O.</div>
+            <div><span>Email:</span> hello@prospertech.dev</div>
+            <div><span>Location:</span> Lagos / Remote, Worldwide</div>
+            <div><span>Freelance:</span> <span class="status-on">Available</span></div>
+          </div>
+
+          <div class="about-actions">
+            <a href="#projects" class="btn btn-primary">Explore My Work</a>
+            <a href="#contact" class="btn btn-outline">Get In Touch</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       STATS
+       ============================================ -->
+  <section class="section stats-section">
+    <div class="container stats-grid reveal">
+      <div class="stat">
+        <i class="fas fa-rocket"></i>
+        <span class="counter" data-target="120">0</span><span class="plus">+</span>
+        <p>Projects Completed</p>
+      </div>
+      <div class="stat">
+        <i class="fas fa-user-friends"></i>
+        <span class="counter" data-target="45">0</span><span class="plus">+</span>
+        <p>Happy Clients</p>
+      </div>
+      <div class="stat">
+        <i class="fas fa-award"></i>
+        <span class="counter" data-target="18">0</span>
+        <p>Awards Won</p>
+      </div>
+      <div class="stat">
+        <i class="fas fa-mug-hot"></i>
+        <span class="counter" data-target="3200">0</span><span class="plus">+</span>
+        <p>Cups of Coffee</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       SKILLS
+       ============================================ -->
+  <section id="skills" class="section">
+    <div class="container">
+      <header class="section-header reveal">
+        <span class="kicker">My Stack</span>
+        <h2>Skills &amp; <span class="grad">Expertise</span></h2>
+        <p>A modern toolbelt sharpened across hundreds of production deployments.</p>
+      </header>
+
+      <div class="skills-grid">
+        <div class="skill-card reveal">
+          <div class="skill-head">
+            <i class="fas fa-laptop-code"></i>
+            <h3>Frontend</h3>
+          </div>
+          <div class="skill-list">
+            <div class="skill-item"><span>React / Next.js</span><span>96%</span><div class="bar"><div data-width="96"></div></div></div>
+            <div class="skill-item"><span>TypeScript</span><span>94%</span><div class="bar"><div data-width="94"></div></div></div>
+            <div class="skill-item"><span>Tailwind CSS / SCSS</span><span>92%</span><div class="bar"><div data-width="92"></div></div></div>
+            <div class="skill-item"><span>Vue / Nuxt</span><span>80%</span><div class="bar"><div data-width="80"></div></div></div>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-head">
+            <i class="fas fa-server"></i>
+            <h3>Backend</h3>
+          </div>
+          <div class="skill-list">
+            <div class="skill-item"><span>Node.js / Express</span><span>95%</span><div class="bar"><div data-width="95"></div></div></div>
+            <div class="skill-item"><span>Python / Django</span><span>85%</span><div class="bar"><div data-width="85"></div></div></div>
+            <div class="skill-item"><span>PostgreSQL / Mongo</span><span>90%</span><div class="bar"><div data-width="90"></div></div></div>
+            <div class="skill-item"><span>GraphQL / REST APIs</span><span>93%</span><div class="bar"><div data-width="93"></div></div></div>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-head">
+            <i class="fas fa-tools"></i>
+            <h3>Tools &amp; DevOps</h3>
+          </div>
+          <div class="skill-list">
+            <div class="skill-item"><span>Docker / Kubernetes</span><span>88%</span><div class="bar"><div data-width="88"></div></div></div>
+            <div class="skill-item"><span>AWS / GCP</span><span>87%</span><div class="bar"><div data-width="87"></div></div></div>
+            <div class="skill-item"><span>CI/CD &amp; GitHub Actions</span><span>91%</span><div class="bar"><div data-width="91"></div></div></div>
+            <div class="skill-item"><span>Figma / UI/UX</span><span>83%</span><div class="bar"><div data-width="83"></div></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tech-marquee reveal">
+        <div class="marquee-track">
+          <span><i class="fab fa-react"></i> React</span>
+          <span><i class="fab fa-node-js"></i> Node.js</span>
+          <span><i class="fab fa-js"></i> JavaScript</span>
+          <span><i class="fab fa-python"></i> Python</span>
+          <span><i class="fab fa-docker"></i> Docker</span>
+          <span><i class="fab fa-aws"></i> AWS</span>
+          <span><i class="fab fa-figma"></i> Figma</span>
+          <span><i class="fab fa-git-alt"></i> Git</span>
+          <span><i class="fab fa-vuejs"></i> Vue</span>
+          <span><i class="fab fa-sass"></i> Sass</span>
+          <!-- duplicate for seamless scroll -->
+          <span><i class="fab fa-react"></i> React</span>
+          <span><i class="fab fa-node-js"></i> Node.js</span>
+          <span><i class="fab fa-js"></i> JavaScript</span>
+          <span><i class="fab fa-python"></i> Python</span>
+          <span><i class="fab fa-docker"></i> Docker</span>
+          <span><i class="fab fa-aws"></i> AWS</span>
+          <span><i class="fab fa-figma"></i> Figma</span>
+          <span><i class="fab fa-git-alt"></i> Git</span>
+          <span><i class="fab fa-vuejs"></i> Vue</span>
+          <span><i class="fab fa-sass"></i> Sass</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       PROJECTS
+       ============================================ -->
+  <section id="projects" class="section">
+    <div class="container">
+      <header class="section-header reveal">
+        <span class="kicker">Selected Work</span>
+        <h2>Featured <span class="grad">Projects</span></h2>
+        <p>A curated showcase of products I've designed, built, and scaled.</p>
+      </header>
+
+      <div class="filter-bar reveal">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="frontend">Frontend</button>
+        <button class="filter-btn" data-filter="backend">Backend</button>
+        <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+      </div>
+
+      <div class="projects-grid" id="projectsGrid">
+        <!-- Cards rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       VIDEO SHOWCASE
+       ============================================ -->
+  <section class="section video-showcase reveal">
+    <video id="showcaseVideo" autoplay muted loop playsinline>
+      <source src="loop.mp4" type="video/mp4" />
+    </video>
+    <div class="video-overlay"></div>
+    <div class="container video-content">
+      <span class="kicker">Showreel</span>
+      <h2>See My Work in <span class="grad">Action</span></h2>
+      <p>A glimpse into the products, animations, and interfaces shipped from the Prosper Tech studio.</p>
+      <button id="videoToggle" class="btn btn-primary play-btn">
+        <i class="fas fa-pause"></i> <span>Pause Reel</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- ============================================
+       SERVICES
+       ============================================ -->
+  <section id="services" class="section">
+    <div class="container">
+      <header class="section-header reveal">
+        <span class="kicker">What I Do</span>
+        <h2>Services I <span class="grad">Provide</span></h2>
+        <p>End-to-end solutions for ambitious teams and founders.</p>
+      </header>
+
+      <div class="services-grid">
+        <article class="service-card reveal">
+          <div class="service-icon"><i class="fas fa-code"></i></div>
+          <h3>Web Development</h3>
+          <p>Blazing-fast, SEO-optimized web platforms built with React, Next.js, and modern best practices.</p>
+          <a href="#contact" class="card-link">Start a project <i class="fas fa-arrow-right"></i></a>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+          <h3>App Development</h3>
+          <p>Native-feel mobile apps with React Native &amp; Expo — one codebase, two stores, zero compromise.</p>
+          <a href="#contact" class="card-link">Start a project <i class="fas fa-arrow-right"></i></a>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-icon"><i class="fas fa-pen-nib"></i></div>
+          <h3>UI / UX Design</h3>
+          <p>Brand-driven interfaces, design systems, and user research that turn visitors into customers.</p>
+          <a href="#contact" class="card-link">Start a project <i class="fas fa-arrow-right"></i></a>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-icon"><i class="fas fa-plug"></i></div>
+          <h3>API Integration</h3>
+          <p>Robust REST &amp; GraphQL APIs, third-party integrations, and developer-friendly documentation.</p>
+          <a href="#contact" class="card-link">Start a project <i class="fas fa-arrow-right"></i></a>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-icon"><i class="fas fa-cloud"></i></div>
+          <h3>Cloud &amp; DevOps</h3>
+          <p>Containerized deployments, CI/CD pipelines, and scalable infrastructure on AWS, GCP, &amp; Vercel.</p>
+          <a href="#contact" class="card-link">Start a project <i class="fas fa-arrow-right"></i></a>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
+          <h3>Performance &amp; Security</h3>
+          <p>Audits, hardening, and optimizations to make your product fast, secure, and audit-ready.</p>
+          <a href="#contact" class="card-link">Start a project <i class="fas fa-arrow-right"></i></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       TESTIMONIALS
+       ============================================ -->
+  <section class="section">
+    <div class="container">
+      <header class="section-header reveal">
+        <span class="kicker">Kind Words</span>
+        <h2>What Clients <span class="grad">Say</span></h2>
+        <p>Trust earned, one shipped product at a time.</p>
+      </header>
+
+      <div class="testimonial-slider reveal">
+        <button class="slider-btn prev" id="testPrev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+        <div class="testimonial-track" id="testTrack">
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <i class="fas fa-quote-left quote"></i>
+              <p>“Prosper rebuilt our checkout flow in three weeks and our conversion rate jumped 38%. He's the rare engineer who understands both pixels and pipelines.”</p>
+              <div class="testimonial-meta">
+                <img src="https://i.pravatar.cc/120?img=12" alt="Sarah Lin" />
+                <div>
+                  <strong>Sarah Lin</strong>
+                  <span>Head of Product, Lumen Labs</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <i class="fas fa-quote-left quote"></i>
+              <p>“Working with Prosper Tech felt like adding a senior CTO to our team. Beautiful interfaces, rock-solid APIs, and zero drama. We'll never go back.”</p>
+              <div class="testimonial-meta">
+                <img src="https://i.pravatar.cc/120?img=32" alt="Marcus Reid" />
+                <div>
+                  <strong>Marcus Reid</strong>
+                  <span>Founder &amp; CEO, Northwind</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <i class="fas fa-quote-left quote"></i>
+              <p>“The mobile app he shipped became our #1 acquisition channel. Thoughtful, fast, and obsessively detail-oriented — exactly what a startup needs.”</p>
+              <div class="testimonial-meta">
+                <img src="https://i.pravatar.cc/120?img=47" alt="Aisha Mensah" />
+                <div>
+                  <strong>Aisha Mensah</strong>
+                  <span>COO, Verdant Health</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <i class="fas fa-quote-left quote"></i>
+              <p>“Genuinely the best engineering partner we've had in 10 years. Communication, code quality, and design taste — all elite.”</p>
+              <div class="testimonial-meta">
+                <img src="https://i.pravatar.cc/120?img=23" alt="David Okafor" />
+                <div>
+                  <strong>David Okafor</strong>
+                  <span>VP Engineering, Atlas Pay</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="slider-btn next" id="testNext" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+
+        <div class="slider-dots" id="testDots"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       BLOG
+       ============================================ -->
+  <section id="blog" class="section">
+    <div class="container">
+      <header class="section-header reveal">
+        <span class="kicker">From the Journal</span>
+        <h2>Latest <span class="grad">Articles</span></h2>
+        <p>Notes on engineering, design, and the craft of shipping software.</p>
+      </header>
+
+      <div class="blog-grid">
+        <article class="blog-card reveal">
+          <div class="blog-img">
+            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&q=80&auto=format&fit=crop" alt="Blog 1" />
+            <span class="blog-tag">Engineering</span>
+          </div>
+          <div class="blog-body">
+            <div class="blog-meta"><i class="far fa-calendar"></i> Apr 12, 2026 · <i class="far fa-clock"></i> 6 min read</div>
+            <h3>Designing API Contracts That Outlive Your Frontend</h3>
+            <p>How OpenAPI-first development and codegen transformed the way we ship features at Prosper Tech.</p>
+            <a href="#" class="card-link">Read article <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <article class="blog-card reveal">
+          <div class="blog-img">
+            <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&q=80&auto=format&fit=crop" alt="Blog 2" />
+            <span class="blog-tag">UI / UX</span>
+          </div>
+          <div class="blog-body">
+            <div class="blog-meta"><i class="far fa-calendar"></i> Mar 28, 2026 · <i class="far fa-clock"></i> 9 min read</div>
+            <h3>Glassmorphism in 2026: When It Works (and When It Doesn't)</h3>
+            <p>A practical guide to using glass surfaces, blur, and depth without sacrificing accessibility.</p>
+            <a href="#" class="card-link">Read article <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <article class="blog-card reveal">
+          <div class="blog-img">
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80&auto=format&fit=crop" alt="Blog 3" />
+            <span class="blog-tag">DevOps</span>
+          </div>
+          <div class="blog-body">
+            <div class="blog-meta"><i class="far fa-calendar"></i> Mar 10, 2026 · <i class="far fa-clock"></i> 11 min read</div>
+            <h3>From Zero to Kubernetes Without Losing Your Weekend</h3>
+            <p>The minimal-viable production setup we deploy for every new SaaS client at Prosper Tech.</p>
+            <a href="#" class="card-link">Read article <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       CONTACT
+       ============================================ -->
+  <section id="contact" class="section">
+    <div class="container contact-grid">
+      <div class="contact-info reveal">
+        <span class="kicker">Get In Touch</span>
+        <h2>Let's build something <span class="grad">extraordinary</span>.</h2>
+        <p>Have a project in mind, or just want to say hello? Send a message and I'll get back within 24 hours.</p>
+
+        <ul class="contact-list">
+          <li><i class="fas fa-envelope"></i><div><strong>Email</strong><span>prosperjames552@gmail.com</span></div></li>
+          <li><i class="fas fa-phone"></i><div><strong>Phone</strong><span>+234 (913) 053-7823</span></div></li>
+          <li><i class="fas fa-map-marker-alt"></i><div><strong>Location</strong><span>Lagos · Remote Worldwide</span></div></li>
+        </ul>
+
+        <div class="social-row">
+          <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" aria-label="X / Twitter"><i class="fab fa-x-twitter"></i></a>
+          <a href="#" aria-label="Dribbble"><i class="fab fa-dribbble"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <form class="contact-form reveal" id="contactForm" action="https://formspree.io/f/xnjloyed" method="POST" novalidate>
+        <!-- <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html"> -->
+        <div class="form-grid">
+          <div class="field">
+            <label for="cf-name">Your Name</label>
+            <input type="text" id="cf-name" name="name" placeholder="Jane Doe" />
+            <small class="error" data-for="name"></small>
+          </div>
+          <div class="field">
+            <label for="cf-email">Email Address</label>
+            <input type="email" id="cf-email" name="email" placeholder="jane@company.com" />
+            <small class="error" data-for="email"></small>
+          </div>
+          <div class="field full">
+            <label for="cf-subject">Subject</label>
+            <input type="text" id="cf-subject" name="subject" placeholder="Project enquiry" />
+            <small class="error" data-for="subject"></small>
+          </div>
+          <div class="field full">
+            <label for="cf-message">Message</label>
+            <textarea id="cf-message" name="message" rows="6" placeholder="Tell me about your project..."></textarea>
+            <small class="error" data-for="message"></small>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">
+          <i class="fas fa-paper-plane"></i> Send Message
+        </button>
+        <div class="form-status" id="formStatus"></div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <a href="#home" class="nav-logo">
+          <span class="logo-mark sm">P<i class="fas fa-bolt"></i></span>
+          <span>Prosper <span class="grad">Tech</span></span>
+        </a>
+        <p>Premium full-stack development studio crafting scalable software, beautiful interfaces, and brand-defining digital products.</p>
+        <div class="social-row">
+          <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" aria-label="X / Twitter"><i class="fab fa-x-twitter"></i></a>
+          <a href="#" aria-label="Dribbble"><i class="fab fa-dribbble"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Web Development</a></li>
+          <li><a href="#services">App Development</a></li>
+          <li><a href="#services">UI / UX Design</a></li>
+          <li><a href="#services">API Integration</a></li>
+          <li><a href="#services">Cloud &amp; DevOps</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Newsletter</h4>
+        <p>Get monthly notes on engineering &amp; design. No spam, ever.</p>
+        <form class="newsletter-form" id="newsletterForm">
+          <input type="email" placeholder="you@email.com" required />
+          <button type="submit" aria-label="Subscribe"><i class="fas fa-arrow-right"></i></button>
+        </form>
+        <small class="newsletter-status" id="newsletterStatus"></small>
+      </div>
+    </div>
+
+    <div class="footer-bottom container">
+      <p>© <span id="year"></span> Prosper Tech. Crafted with care &amp; caffeine.</p>
+      <p>Designed &amp; developed by <span class="grad">Prosper Tech Studio</span></p>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- ============================================
+       PROJECT MODAL
+       ============================================ -->
+  <div class="modal" id="projectModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-card">
+      <button class="modal-close" data-close aria-label="Close"><i class="fas fa-times"></i></button>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="/script.js"></script>
+</body>
+</html>
